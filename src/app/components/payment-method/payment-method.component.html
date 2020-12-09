@@ -2,14 +2,14 @@
     <ngb-panel id="paypal" title="paypal">
         <ng-template ngbPanelHeader let-opened="opened">
             <div class="row">
-            <div class="col-md-10">
+            <div class="col-md-10 col-sm-6 col-xs-6">
             <input type="radio" value="paypal" (click)="openPanel('paypal')" name="paymentSelector" />
             <span class="ml-2">Paypal</span>
-             <div class="text-muted font-size875 ml-3">
+             <div class="text-muted font-size875 ml-3 d-none d-sm-block">
                  Safe payment online. Credit card needed,Paypal account is not necessary
              </div>   
             </div>
-            <div class="col-md-2 paypal-image">
+            <div class="col-md-2 col-sm-4 col-xs-6 paypal-image">
 
             </div>
         </div>
@@ -22,7 +22,7 @@
         <ng-template ngbPanelHeader let-opened="opened">
             <input type="radio" value="creditcard" checked (click)="openPanel('creditcard')" name="paymentSelector" />
             <span class="ml-2">Credit Card</span>
-            <div class="text-muted font-size875 ml-3">
+            <div class="text-muted font-size875 ml-3 d-none d-sm-block">
                 Safe money transfer using bank accoount. Visa, Dicover, American express
             </div>  
         </ng-template>

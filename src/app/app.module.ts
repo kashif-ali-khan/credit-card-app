@@ -11,6 +11,8 @@ import { MainComponent } from './components/main/main.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CreditCardComponent } from './components/credit-card/credit-card.component';
 import { PaypalComponent } from './components/paypal/paypal.component';
+import { TextMaskModule } from 'angular2-text-mask';
+import { ToastComponent } from './components/toast/toast.component';
 
 @NgModule({
   declarations: [
@@ -21,14 +23,16 @@ import { PaypalComponent } from './components/paypal/paypal.component';
     SummaryComponent,
     MainComponent,
     CreditCardComponent,
-    PaypalComponent
+    PaypalComponent,
+    ToastComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    TextMaskModule
   ],
   providers: [],
   bootstrap: [AppComponent]

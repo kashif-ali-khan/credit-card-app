@@ -12,6 +12,9 @@ html, body{
 
 .paypal-image{
   background-image: url("https://i.forbesimg.com/media/lists/companies/paypal_416x416.jpg");
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
+  height: 50px;
+    width: 50px;
 }
