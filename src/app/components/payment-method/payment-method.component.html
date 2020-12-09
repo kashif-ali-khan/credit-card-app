@@ -1,0 +1,34 @@
+<ngb-accordion #a="ngbAccordion" [closeOthers]="true" [activeIds]="activePanel">
+    <ngb-panel id="paypal" title="paypal">
+        <ng-template ngbPanelHeader let-opened="opened">
+            <div class="row">
+            <div class="col-md-10">
+            <input type="radio" value="paypal" (click)="openPanel('paypal')" name="paymentSelector" />
+            <span class="ml-2">Paypal</span>
+             <div class="text-muted font-size875 ml-3">
+                 Safe payment online. Credit card needed,Paypal account is not necessary
+             </div>   
+            </div>
+            <div class="col-md-2 paypal-image">
+
+            </div>
+        </div>
+        </ng-template>
+        <ng-template ngbPanelContent>
+            Pay pal selected
+        </ng-template>
+    </ngb-panel>
+    <ngb-panel id="creditcard">
+        <ng-template ngbPanelHeader let-opened="opened">
+            <input type="radio" value="creditcard" checked (click)="openPanel('creditcard')" name="paymentSelector" />
+            <span class="ml-2">Credit Card</span>
+            <div class="text-muted font-size875 ml-3">
+                Safe money transfer using bank accoount. Visa, Dicover, American express
+            </div>  
+        </ng-template>
+        <ng-template ngbPanelContent>
+            <app-credit-card></app-credit-card>
+        </ng-template>
+    </ngb-panel>
+
+</ngb-accordion>
